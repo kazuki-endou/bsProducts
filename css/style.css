@@ -1,0 +1,63 @@
+@charset "UTF-8";
+
+/*-------------------------
+  初期値
+-------------------------*/
+
+:root {
+  --key-color: #8e44ad;
+  --sub-color: #7e349d;
+}
+
+body {
+  padding-top: 72px;
+  /* ページ内リンクのアニメーションスムーズを追加 */
+  scroll-behavior: smooth;
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    padding-top: 57px;
+  }
+}
+
+ul {
+  padding-left: 0;
+  list-style: none;
+}
+
+/*-------------------------
+  トップ
+-------------------------*/
+
+.topics p {
+  text-align: justify;
+  display: -webkit-box; /* Flexコンテナに変換 */
+  /* 要素内の配置方向(垂直水平)を選択 */
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 5; /* 表示行の高さを保持、本環境だと5で揃う */
+  overflow: hidden; /* はみ出した文字を隠す */
+}
+
+.topics .col-lg-4 {
+  /* メニューで隠れないようにスクロール時の位置を変更 */
+  scroll-margin-top: 50vw;
+}
+
+.btn-primary {
+  background-color: var(--key-color);
+  border: 1px solid var(--key-color);
+}
+
+.btn-primary:hover {
+  background-color: var(--sub-color);
+  border: 1px solid var(--sub-color);
+}
+
+footer a {
+  color: #8e44ad;
+}
+
+footer a:hover {
+  color: #7e349d;
+}
